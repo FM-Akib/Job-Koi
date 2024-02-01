@@ -8,13 +8,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Landing from './Landing/Landing.jsx';
+import Home from './Home/Home.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Landing/>,
     children: [
-      
+      {
+        path: "/",
+        element: <Home/>
+      }
     ]
   },
 ]);

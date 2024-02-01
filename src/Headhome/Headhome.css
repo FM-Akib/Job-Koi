@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+.Headhome{
+    /* background-color: aqua; */
+    height: 500px;
+    width:80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+.dream-job-left{
+    padding:2rem;
+}
+.dream-job-left p{
+    color: #757575;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.dream-job-txt{
+    color: #DD2476;
+}
+.get-start-btn{
+    margin-top:10px;
+}
+.dream-job-left h1 {
+    font-family: 'Rubik', sans-serif;
+    /* font-weight: bolder; */
+    font-size: 40px;
+}
+.dream-job-right img{
+    height: 450px;
+    /* width: 100%; */
+}
