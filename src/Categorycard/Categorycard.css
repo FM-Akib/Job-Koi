@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+.Categorycard{
+    height: 200px;
+    width:250px;
+    background-color: #dbdfff97;
+    border-radius: 8px;
+    padding: 1rem;
+    /* padding-left: 2rem; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content:center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.CategorycardImage{
+    height: 60px;
+    width: 60px;
+    background-color: #ffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.categarory-items h3,p{
+    font-family: 'Josefin Sans', sans-serif;
+}
+.categarory-items p{
+color: #757575;
+
+}

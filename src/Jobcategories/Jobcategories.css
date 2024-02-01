@@ -1,4 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800&display=swap');
+
+
 .jobcategories{
-    height: 500px;
-    background-color: crimson;
+    /* height: 500px; */
+    /* background-color: rgb(253, 181, 196); */
+    width: 85%;
+    margin: 6rem auto;
+    
+}
+.categories{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:20px;
+}
+.jobcategory-title{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction:column;
+    margin-bottom:3rem;
+}
+.jobcategory-title h2{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 30px;
+    margin-bottom:0 ;
+}
+.jobcategory-title p{
+
+color: #757575;
 }
