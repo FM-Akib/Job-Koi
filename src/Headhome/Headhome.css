@@ -21,11 +21,17 @@
 }
 .get-start-btn{
     margin-top:10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 .dream-job-left h1 {
     font-family: 'Rubik', sans-serif;
     /* font-weight: bolder; */
     font-size: 40px;
+}
+.dream-job-right{
+    display: flex;
+    justify-content: center;
 }
 .dream-job-right img{
     height: 450px;
