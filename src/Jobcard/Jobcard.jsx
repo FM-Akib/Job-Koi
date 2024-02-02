@@ -16,8 +16,8 @@ const Jobcard = ({job}) => {
                     <p>{job_type}</p>
                 </div>
                 <div className='job-location'>
-                <div className='chip '><div className='chip-icon'><img src={locationIcn} alt=""/></div><p> {location}</p></div>
-                <div className='chip '><div className='chip-icon'><img src={salaryIcn} alt=""/></div> <p> {salary}</p></div>
+                <div className='chip'><div className='chip-icon'><img src={locationIcn} alt=""/></div><p> {location}</p></div>
+                <div className='chip'><div className='chip-icon'><img src={salaryIcn} alt=""/></div> <p> {salary}</p></div>
                 </div>
             </div>
            <Link to="/jobDetails"><button className='view-btn'>view details</button></Link> 
