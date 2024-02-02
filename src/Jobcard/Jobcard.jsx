@@ -2,6 +2,7 @@ import React from 'react';
 import './Jobcard.css';
 import locationIcn from '../assets/icons/location2.png'
 import salaryIcn from '../assets/icons/money.png'
+import { Link } from 'react-router-dom';
 const Jobcard = ({job}) => {
     const {logo,job_title,company_name,remote_or_onsite,location,job_type,salary}=job;
     return (
@@ -19,7 +20,7 @@ const Jobcard = ({job}) => {
                 <div className='chip '><div className='chip-icon'><img src={salaryIcn} alt=""/></div> <p> {salary}</p></div>
                 </div>
             </div>
-            <button className='view-btn'>view details</button>
+           <Link to="/jobDetails"><button className='view-btn'>view details</button></Link> 
         </div>
     );
 };
