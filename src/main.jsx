@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Landing from './Landing/Landing.jsx';
 import Home from './Home/Home.jsx';
+import Featurejobs from './Featurejobs/Featurejobs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home/>,
-        loader: ()=>fetch('categories.json')
+        loader: ()=>fetch('categories.json'),
       }
     ]
   },

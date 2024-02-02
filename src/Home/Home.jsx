@@ -2,6 +2,7 @@ import React from 'react';
 import Headhome from '../Headhome/Headhome';
 import Jobcategories from '../Jobcategories/Jobcategories';
 import { useLoaderData } from 'react-router-dom';
+import Featurejobs from '../Featurejobs/Featurejobs';
 
 
 
@@ -14,6 +15,7 @@ const Home = () => {
             <Jobcategories
             categories={categories}
             ></Jobcategories>
+            <Featurejobs/>
         </>
     );
 };
