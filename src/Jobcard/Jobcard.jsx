@@ -1,6 +1,7 @@
 import React from 'react';
 import './Jobcard.css';
-
+import locationIcn from '../assets/icons/location2.png'
+import salaryIcn from '../assets/icons/money.png'
 const Jobcard = ({job}) => {
     const {logo,job_title,company_name,remote_or_onsite,location,job_type,salary}=job;
     return (
@@ -14,11 +15,11 @@ const Jobcard = ({job}) => {
                     <p>{job_type}</p>
                 </div>
                 <div className='job-location'>
-                    <p>{location}</p>
-                    <p>{salary}</p>
+                <div className='chip '><div className='chip-icon'><img src={locationIcn} alt=""/></div><p> {location}</p></div>
+                <div className='chip '><div className='chip-icon'><img src={salaryIcn} alt=""/></div> <p> {salary}</p></div>
                 </div>
             </div>
-            <button>view details</button>
+            <button className='view-btn'>view details</button>
         </div>
     );
 };
