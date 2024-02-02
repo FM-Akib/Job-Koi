@@ -6,6 +6,19 @@ const Jobcard = ({job}) => {
     return (
         <div className='job-card'>
             <img src={logo} alt={job_title} />
+            <div className='job-details'>
+                <h2 className='job-title'>{job_title}</h2>
+                <p>{company_name}</p>
+                <div className='job-type'>
+                    <p>{remote_or_onsite}</p>
+                    <p>{job_type}</p>
+                </div>
+                <div className='job-location'>
+                    <p>{location}</p>
+                    <p>{salary}</p>
+                </div>
+            </div>
+            <button>view details</button>
         </div>
     );
 };

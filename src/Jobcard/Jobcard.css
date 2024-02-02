@@ -2,4 +2,31 @@
     min-height: 300px; 
     width: 100%;
     background-color: yellow;
+    padding: 2.5rem;
+}
+.job-details h2{
+    font-size:18px;
+    font-weight: bold; 
+}
+.job-details p{
+    color:#757575;
+}
+.job-type{
+    display: flex;
+}
+.job-type p{
+    /* background-color:brown; */
+    font-size: small;
+    padding: 5px 9px 5px 9px;
+    border: 1px solid #757575;
+    border-radius: 8px;
+    margin-right: 8px;
+    text-align: center;
+}
+.job-location{
+    display: flex;
+}
+.job-location p{
+    margin-right: 8px;
+
 }
