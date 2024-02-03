@@ -6,6 +6,8 @@ import { FiPhone } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaRegAddressBook } from "react-icons/fa";
 import jobHead from '.././assets/image/job_details.png';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Jobdetails = () => {
@@ -18,9 +20,14 @@ const Jobdetails = () => {
     //  console.log(job);
     const {job_description,job_responsibility,educational_requirements,experiences,salary}=job;
     const {phone,email,address}=job.contact_information;
+
+    const HandleApplyNow=()=>{
+        toast("Applied Successfully!");
+    }
     
     return (
         <>
+        <ToastContainer />
         <div className="mb-20">
          <img className="bg-cover h-50" src={jobHead} alt=""/>
 
@@ -65,6 +72,8 @@ const Jobdetails = () => {
                     <FaRegAddressBook className='text-xl mt-1 mr-2'/>  <p> <span className="font-bold text-black">Address: </span>{address}</p>
                     </div>
                     </div>
+
+                    <button onClick={HandleApplyNow} className="btn btn-primary w-full text-white mt-12" >Apply Now</button>
                     </div>
                 </div>
             </div>
