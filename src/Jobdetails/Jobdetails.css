@@ -1,4 +1,10 @@
-.job-details{
+.job-details-page{
     width:80%;
     margin: 0 auto;
+}
+.job-details-container p{
+margin-bottom: 40px;
+}
+.hr-line{
+    border-top: 1px solid rgb(180, 180, 180);
 }
