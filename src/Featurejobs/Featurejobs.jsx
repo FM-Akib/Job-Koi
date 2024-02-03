@@ -4,6 +4,8 @@ import './Featurejobs.css';
 const Featurejobs = () => {
 
     const [jobs,setJobs]=useState([]);
+    const [dataLength,setDataLength]=useState(4); 
+
     useEffect(() =>{
             fetch('jobs.json')
             .then(response => response.json())
@@ -20,11 +22,14 @@ const Featurejobs = () => {
             </div>
             <div className="jobs-container">
                  {
-                    jobs.map(job =><Jobcard
+                    jobs.slice(0,dataLength).map(job =><Jobcard
                     key={job.id}
                     job={job}
                     ></Jobcard>)
                  }
+            </div>
+            <div className={`flex justify-center mt-5 ${dataLength===jobs.length && 'hidden'}`}>
+                <button onClick={()=>setDataLength(jobs.length)} className="btn bg-[#D4145A] text-white">Show All</button>
             </div>
         </section>
     );
