@@ -1,21 +1,27 @@
 .JobDetails-head{
    height: 400px;
-   /* background-color: rgb(251, 255, 127); */
+   background-color: rgb(251, 255, 127);
    display: flex;
    justify-content: space-between;
+   /* position: relative; */
     
    
 }
-.JobDetails-left-img {
+
+
+.jobdetails-left-img{
     position: relative;
-    height: 100%;
+    background-color: blue;
 }
-.Image{
-    position: absolute;
-    bottom: 260px;
-    left: 0px;
-}
+
+
 .jobdetails-left-img img{
  height:185px;
  width: 297px;
+ 
+}
+.Image{
+    position: absolute;
+    justify-content: end;
+    /* margin-top:500px; */
 }
