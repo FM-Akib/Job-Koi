@@ -1,14 +1,16 @@
-import React from 'react';
 import './Jobdetails.css';
-import backLeft from '../assets/image/bg1.png';
-import backRight from '../assets/image/bg2.png';
+
 
 const Jobdetails = () => {
     return (
         <>
-            <div className="JobDetails-head">
-                <div className="jobdetails-left-img"><img className='Image' src={backLeft} alt=""/></div>
-                <div className='jobdetails-right-img'><img src={backRight} alt=""/></div>
+            <div className="grid grid-cols-4 job-details">
+                <div className="col-span-3 p-4">
+                    details
+                </div>
+                <div className="col-span-1 bg-orange-600 p-3">
+                    bar
+                </div>
             </div>
         </>
     );

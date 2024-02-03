@@ -4,7 +4,7 @@ import locationIcn from '../assets/icons/location2.png'
 import salaryIcn from '../assets/icons/money.png'
 import { Link } from 'react-router-dom';
 const Jobcard = ({job}) => {
-    const {logo,job_title,company_name,remote_or_onsite,location,job_type,salary}=job;
+    const {id,logo,job_title,company_name,remote_or_onsite,location,job_type,salary}=job;
     return (
         <div className='job-card'>
             <img src={logo} alt={job_title} />
@@ -20,7 +20,7 @@ const Jobcard = ({job}) => {
                 <div className='chip'><div className='chip-icon'><img src={salaryIcn} alt=""/></div> <p> {salary}</p></div>
                 </div>
             </div>
-           <Link to="/jobDetails"><button className='view-btn'>view details</button></Link> 
+           <Link to={`/jobDetails/${id}`}><button className='view-btn'>view details</button></Link> 
         </div>
     );
 };
