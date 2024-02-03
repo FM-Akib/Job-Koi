@@ -8,6 +8,7 @@ import { FaRegAddressBook } from "react-icons/fa";
 import jobHead from '.././assets/image/job_details.png';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { saveJobApplication } from '../utilities/LocalStorage';
 
 
 const Jobdetails = () => {
@@ -22,7 +23,9 @@ const Jobdetails = () => {
     const {phone,email,address}=job.contact_information;
 
     const HandleApplyNow=()=>{
+        saveJobApplication(id);
         toast("Applied Successfully!");
+
     }
     
     return (
@@ -41,7 +44,7 @@ const Jobdetails = () => {
                 </div>
 
 
-                <div className="col-span-1 bg-[#e3e7fd] p-6 rounded-lg">
+                <div className="col-span-1 bg-[#e3e7fd] p-6 rounded-lg shadow-lg">
                     <div className="mb-6">
                     <h3 className="font-bold text-black mb-2">Job Details</h3>
                     <hr className="hr-line"></hr>
