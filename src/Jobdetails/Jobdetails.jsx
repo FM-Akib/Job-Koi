@@ -5,6 +5,7 @@ import { CiCalendar } from "react-icons/ci";
 import { FiPhone } from "react-icons/fi";
 import { HiOutlineMail } from "react-icons/hi";
 import { FaRegAddressBook } from "react-icons/fa";
+import jobHead from '.././assets/image/job_details.png';
 
 
 const Jobdetails = () => {
@@ -20,6 +21,10 @@ const Jobdetails = () => {
     
     return (
         <>
+        <div className="mb-20">
+         <img className="bg-cover h-50" src={jobHead} alt=""/>
+
+        </div>
             <div className="grid grid-cols-4 job-details-page">
                 <div className="col-span-3 p-5 job-details-container">
                   <p> <span className="font-bold text-black">Job Description: </span>{job_description}</p>
