@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { GetStoredJobDetails } from "../utilities/LocalStorage";
 import { useLoaderData } from "react-router-dom";
 import AppliedCard from "../AppliedCard/AppliedCard";
+import './AppliedJobs.css';
 
 const Appliedjobs = () => {
          
@@ -33,7 +34,7 @@ const Appliedjobs = () => {
            <div>
                 filter
            </div>
-           <div className="">
+           <div className="applied-jo-container">
                {
                     AppliedJobs.map(job => <AppliedCard
                     key={job.id}
