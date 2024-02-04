@@ -1,4 +1,3 @@
-import React from 'react';
 import './Jobcard.css';
 import locationIcn from '../assets/icons/location2.png'
 import salaryIcn from '../assets/icons/money.png'

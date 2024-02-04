@@ -9,7 +9,7 @@ const Header = () => {
             <img src={logo} alt=""/>
             <div className='nav-items'>
                 <Link to="">Statistics</Link>
-                <Link to="">Applied jobs</Link>
+                <Link to="/appliedjobs">Applied jobs</Link>
                 <Link to="">Blog</Link>
             </div>
             <button className="apply-btn shadow-lg" >Start Appling</button>

@@ -7,14 +7,12 @@ import Featurejobs from '../Featurejobs/Featurejobs';
 
 
 const Home = () => {
-     const categories = useLoaderData();
-    //  console.log(categories);
+    //  const categories = useLoaderData();
+    //   console.log(categories);
     return (
         <>
             <Headhome/>
-            <Jobcategories
-            categories={categories}
-            ></Jobcategories>
+            <Jobcategories></Jobcategories>
             <Featurejobs/>
         </>
     );

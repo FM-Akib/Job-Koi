@@ -9,6 +9,7 @@ import {
 import Landing from './Landing/Landing.jsx';
 import Home from './Home/Home.jsx';
 import Jobdetails from './Jobdetails/Jobdetails.jsx';
+import Appliedjobs from './Appliedjobs/Appliedjobs.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,13 +18,18 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home/>,
-        loader: ()=>fetch('categories.json'),
+        element: <Home/>
       },
       {
         path: "jobDetails/:id",
         element: <Jobdetails/>,
         loader: ()=>fetch('jobs.json'),
+      },
+      {
+        path: "appliedjobs",
+        element: <Appliedjobs/>,
+        loader: fetch('jobs.json'),
+       
       }
     ]
   },

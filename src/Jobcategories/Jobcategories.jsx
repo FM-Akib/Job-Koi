@@ -1,10 +1,17 @@
-import React from 'react';
+import  { useEffect, useState } from 'react';
 import './Jobcategories.css';
 import Categorycard from '../Categorycard/Categorycard';
 
 
-const Jobcategories = ({categories}) => {
-    // console.log(categories);
+const Jobcategories = () => {
+    const [jobcategories,setJobcategories] =useState();
+    
+    useEffect(()=>{
+        fetch('categories.json')
+        .then(response=>response.json())
+        .then(data=>setJobcategories(data));
+    },[])
+   
     return (
         <section className="jobcategories">
             <div className="jobcategory-title">
@@ -13,7 +20,7 @@ const Jobcategories = ({categories}) => {
             </div>
             <div className="categories">
             {
-              categories.map(category=><Categorycard
+              jobcategories.map(category=><Categorycard
               key={category.id}
               category={category}
               ></Categorycard>)
