@@ -23,7 +23,7 @@ const Jobdetails = () => {
     const {phone,email,address}=job.contact_information;
 
     const HandleApplyNow=()=>{
-        saveJobApplication(id);
+        saveJobApplication(idInt);
         toast("Applied Successfully!");
 
     }

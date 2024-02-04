@@ -4,7 +4,7 @@ import Categorycard from '../Categorycard/Categorycard';
 
 
 const Jobcategories = () => {
-    const [jobcategories,setJobcategories] =useState();
+    const [jobcategories,setJobcategories] =useState([]);
     
     useEffect(()=>{
         fetch('categories.json')
