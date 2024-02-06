@@ -8,7 +8,7 @@ const Appliedjobs = () => {
          
     const jobs=useLoaderData();
 
-   const [AppliedJobs,setAppliedJobs]=useState([])
+    const [AppliedJobs,setAppliedJobs]=useState([])
 
 
     useEffect(() =>{
@@ -31,8 +31,8 @@ const Appliedjobs = () => {
      return (
         <div>
            
-           <div>
-                filter
+           <div className="">
+                
            </div>
            <div className="applied-jo-container">
                {
