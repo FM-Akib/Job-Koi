@@ -9,7 +9,22 @@ const Appliedjobs = () => {
     const jobs=useLoaderData();
 
     const [AppliedJobs,setAppliedJobs]=useState([])
+    const [filterJobs,setFilterJobs]=useState([AppliedJobs]);
 
+    const HandleFilterJob=(filter) => {
+        if(filter==='all'){
+            setFilterJobs(AppliedJobs);
+        }
+        else if(filter==='Remote'){
+            const remoteJobs= AppliedJobs.filter(job=>job.remote_or_onsite==='Remote');
+            setFilterJobs(remoteJobs);
+        }
+        else if(filter==='Onsite'){
+            const onsiteJobs= AppliedJobs.filter(job=>job.remote_or_onsite==='Onsite');
+            setFilterJobs(onsiteJobs);
+        }
+
+    }
 
     useEffect(() =>{
         const localStoragepreAppliedJobid = GetStoredJobDetails();
@@ -31,12 +46,21 @@ const Appliedjobs = () => {
      return (
         <div>
            
-           <div className="">
-                
-           </div>
+          
            <div className="applied-jo-container">
+               
+           <div className="flex justify-end mt-16 items-center">
+           <details className="dropdown">
+            <summary className="m-1 bg-orange-500 text-white w-28 btn">Filter</summary>
+            <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                <li onClick={()=>HandleFilterJob('all')}><a>All</a></li>
+                <li onClick={()=>HandleFilterJob('Remote')}><a>Remote</a></li>
+                <li onClick={()=>HandleFilterJob('Onsite')}><a>Onsite</a></li>
+            </ul>
+           </details>
+           </div>
                {
-                    AppliedJobs.map(job => <AppliedCard
+                    filterJobs.map(job => <AppliedCard
                     key={job.id}
                     job={job}
                     ></AppliedCard>)
